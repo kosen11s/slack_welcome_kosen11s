@@ -20,8 +20,8 @@ class Member(object):
 def getJson():
 	url = 'https://slack.com/api/channels.join'
 	parameters = {
-					'token' : slackbot_settings.API_TOKEN_TEAM,
-					'name' : 'random'}
+		'token' : slackbot_settings.API_TOKEN_TEAM,
+		'name' : 'random'}
 	r = requests.get(url, params = parameters)
 	data = json.loads(r.text)
 	mem = Member()
@@ -47,8 +47,8 @@ if __name__ == '__main__':
 			mem.memberCount = len(jsonChannel['channel']['members'])
 			url = 'https://slack.com/api/users.info'
 			parameters = {
-							'token' : slackbot_settings.API_TOKEN_TEAM,
-							'user' : jsonChannel['channel']['members'][mem.memberCount - 1]}
+				'token' : slackbot_settings.API_TOKEN_TEAM,
+				'user' : jsonChannel['channel']['members'][mem.memberCount - 1]}
 			r_2 = requests.get(url, params = parameters)
 			jsonUser = json.loads(r_2.text)
 			welcomePost(jsonUser['user']['name'])
