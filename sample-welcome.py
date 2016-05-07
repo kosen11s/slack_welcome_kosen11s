@@ -35,7 +35,7 @@ def welcomePost(user):
 		'random',
 		'Hi! ' + user + " " + welcomeMessage,
 		as_user = True,
-		links_names = 1
+		link_names = 1
 	)
 
 if __name__ == '__main__':
