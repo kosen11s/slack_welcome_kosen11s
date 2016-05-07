@@ -34,7 +34,8 @@ def welcomePost(user):
 	slack.chat.post_message(
 		'random',
 		'Hi! ' + user + " " + welcomeMessage,
-		as_user = True
+		as_user = True,
+		links_names = 1
 	)
 
 if __name__ == '__main__':
