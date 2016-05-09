@@ -3,8 +3,8 @@ import json, requests
 import slackbot_settings
 
 welcomeMessage = """
-Welcome kosen11s:+1:\n
-#general , #profile , #logo チャンネルには必ず入ってね:heart:\n
+Welcome to kosen11s:tada::tada::tada::tada:\n
+まずは #profile チャンネルで簡単に自己紹介してね:heart:\n
 他にも #github , #muscle , #nsfw , #skype があるよ！適当に入ってね:raryosu:\n
 それとこれが最後！以下のリンクのスキルシートに記入をお願いしてるから記入お願いします！\n
 URLはひ・み・つ♡\n
