@@ -32,7 +32,7 @@ def getJson():
 def welcomePost(user):
 	slack = Slacker(slackbot_settings.API_TOKEN)
 	slack.chat.post_message(
-		'random',
+		'@' + user,
 		'Hi! ' + user + " " + welcomeMessage,
 		as_user = True,
 		link_names = 1
@@ -49,7 +49,7 @@ if __name__ == '__main__':
 			url = 'https://slack.com/api/users.info'
 			parameters = {
 				'token' : slackbot_settings.API_TOKEN_TEAM,
-				'user' : jsonChannel['channel']['members'][mem.memberCount - 1]}
+				'user' : jsonChannel['channel']['members'][0]}
 			r_2 = requests.get(url, params = parameters)
 			jsonUser = json.loads(r_2.text)
 			welcomePost(jsonUser['user']['name'])
